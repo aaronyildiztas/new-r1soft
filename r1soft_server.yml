@@ -1,9 +1,7 @@
----
-- name: Install R1soft Server
-  become: yes
-  become_method: sudo
+- hosts: all
   user: centos
-  hosts: server
+  become: yes
+  become_method: sudo 
   tasks:
   - name: Create repo
     copy:
