@@ -1,9 +1,7 @@
----
-- name: Install R1soft Agent
-  become: yes
-  become_method: sudo
+- hosts: all
   user: centos
-  hosts: agent
+  become: yes
+  become_method: sudo 
   tasks:
   - name: Create repo
     copy:
